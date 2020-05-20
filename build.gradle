@@ -7,7 +7,8 @@
 
 buildscript {
     dependencies {
-        classpath 'com.h2database:h2:1.4.197'
+        classpath 'com.h2database:h2:1.4.197'        
+        classpath 'com.ibm.db2:jcc:11.5.0.0'
     }
 }
 
@@ -46,4 +47,5 @@ flyway {
     password = "${config_env.flywayProperties.password}"
     locations = "${config_common.flywayProperties.locations}".split(',')
     schemas = "${config_env.flywayProperties.schemas}".split(',')
+    table = "${config_common.flywayProperties.table}"
 }
