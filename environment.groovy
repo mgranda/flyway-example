@@ -13,7 +13,7 @@ environments {
             url="jdbc:h2:file:./target/devdb"
             user="sa"
             password=""
-            schemas="DB_DEV_SCHEMA_VERSION"
+            schemas="DB_DEV_SCHEMA_VERSION,SCHEMATEST"
         }
     }
 
@@ -23,7 +23,7 @@ environments {
             url="jdbc:h2:file:./target/qadb"
             user="user_qa"
             password=""
-            schemas="DB_QA_SCHEMA_VERSION"
+            schemas="DB_QA_SCHEMA_VERSION,SCHEMATEST"
         }
     }
 
@@ -31,9 +31,9 @@ environments {
         flywayProperties {
             driver="com.ibm.db2.jcc.DB2Driver"
             url="jdbc:db2://localhost:50000/test"
-            user=""
-            password=""
-            schemas="DB_PRO_SCHEMA_VERSION"
+            user="db2inst1"
+            password="db2inst1"
+            schemas="DB_PRO_SCHEMA_VERSION,SCHEMATEST"
         }
     }    
 }
